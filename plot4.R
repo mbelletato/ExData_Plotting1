@@ -21,11 +21,11 @@ png(file = "plot4.png")
 par(mfrow=c(2, 2))
 
 plot(Data$DateTime , Data$Global_active_power, xlab="", 
-     ylab="Global Active Power (kilowatts)", type="l")
+     ylab="Global Active Power", type="l")
 
 plot(Data$DateTime , Data$Voltage, xlab="datetime", ylab="Voltage", type="l")
 
-plot(Data$DateTime, Data$Sub_metering_1, type = "n")
+plot(Data$DateTime, Data$Sub_metering_1, type = "n", xlab="", ylab="Energy sub metering")
 points(Data$DateTime, Data$Sub_metering_1, col="black", type="l")
 points(Data$DateTime, Data$Sub_metering_2, col="red", type="l")
 points(Data$DateTime, Data$Sub_metering_3, col="blue", type="l")
